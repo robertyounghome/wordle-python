@@ -21,7 +21,7 @@ You can see that the original list contains 2315 words. More words are used to v
 
 I guessed the word 'table' with a mask of 'bgbyg', and we can see that there are only 8 words remaining.
 
-![Screenshot](/img/wordle-cmd1.png)
+![Screenshot](/img/wordle-cmd2.png)
 
 You may continue guessing. Or if you would like, you can view the filtered word lists in the file(s) results.json or results.txt. 
 
