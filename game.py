@@ -79,7 +79,7 @@ if __name__ == '__main__':
         g.local_init()
         gg = Guess(g.full_word_list)
         keep_playing = 'Y'
-        print()
+        print('\n'*40)
         print('---------New game-----------')
         print(f"Number of words for validations is {len(g.full_word_list)}.")
         print()
