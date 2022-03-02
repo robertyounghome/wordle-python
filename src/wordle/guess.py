@@ -20,10 +20,18 @@
 from collections import Counter
 import re 
 from exceptions import InvalidMask, InvalidWord
+from data import Data 
+
+DATA_TXT_ALLOWED_WORDS = "wordle-allowed-guesses.txt"
+DATA_TXT_ANSWERS = "wordle-answers-alphabetical.txt"
 
 class Guess:
     
     def __init__(self, full_word_list):
+        if full_word_list == None:
+            words = Data(DATA_TXT_ANSWERS).words
+            full_word_list = Data(DATA_TXT_ALLOWED_WORDS).words
+            full_word_list = set(full_word_list + words)
         self.full_word_list = full_word_list
 
     def valid_word(self, word):

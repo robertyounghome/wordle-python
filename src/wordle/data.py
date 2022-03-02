@@ -22,7 +22,9 @@ from collections import Counter
 
 class Data:
     def __init__(self, file_name):
-        self.words = open(file_name).read().splitlines()
+        self.words = None
+        if file_name:
+            self.words = open(file_name).read().splitlines()
 
     def __str__(self):
         return f"Data contains {len(self.words)} total words."

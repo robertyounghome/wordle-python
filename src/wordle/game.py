@@ -69,6 +69,10 @@ class Game:
         self.full_word_list = Data(full_list).words 
         self.full_word_list = set(self.full_word_list + self.data.words)
 
+    def api_update(self, answers):
+        self.data = Data(None)
+        self.data = self.data.init_list(answers)
+
     def __str__(self):
         return self.data.__str__()
 
